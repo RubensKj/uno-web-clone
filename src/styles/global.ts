@@ -1,4 +1,4 @@
-import { createGlobalStyle  } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 
@@ -15,7 +15,7 @@ export default createGlobalStyle`
 
   body {
     font: 16px 'Poppins', sans-serif;
-    background-color: #fafbff;
+    background-color: #fff;
     color: #333;
     -webkit-font-smoothing: antialiased !important;
   }
@@ -23,5 +23,9 @@ export default createGlobalStyle`
   button {
     font: 16px 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased !important;
+  }
+
+  :root {
+    --sidebar-width: 68px;
   }
 `;

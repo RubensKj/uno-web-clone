@@ -24,17 +24,17 @@ const HeaderBar: React.FC = () => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#c">
             <LayersIcon size={20} color="#2f363d" />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#b">
             <UsersIcon size={20} color="#2f363d" />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#a">
             <ConfigIcon size={20} color="#2f363d" />
           </a>
         </li>

@@ -26,6 +26,11 @@ export default createGlobalStyle`
   }
 
   :root {
+    --table-color: #594a4e;
     --sidebar-width: 68px;
+    --card-default-color: white;
+    --card-yellow-color: #fec771;
+    --card-blue-color: #4f98ca;
+    --card-red-color: #f65c78;
   }
 `;

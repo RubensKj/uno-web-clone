@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface Props {
+  isMe: boolean;
+  isMyTurn: boolean;
+}
+
+export const Container = styled.div<Props>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,6 +21,10 @@ export const Container = styled.div`
 
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
+  }
+
+  @media only screen and (max-width: 780px) {
+    display: ${props => props.isMe ? 'none;' : 'flex;'};
   }
 `;
 

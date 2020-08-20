@@ -8,6 +8,11 @@ export const Container = styled.div`
 
   height: 100%;
   overflow: hidden;
+
+  @media only screen and (max-width: 780px) {
+    padding-left: 0 !important;
+    padding-top: var(--header-height) !important;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -21,7 +26,6 @@ export const Wrapper = styled.div`
 `;
 
 export const PositionUser = styled.div`
-  
 `;
 
 export const CardsArea = styled(PositionUser)`
@@ -38,6 +42,14 @@ export const Primary = styled(PositionUser)`
   display: flex;
   justify-content: center;
   align-items: flex-end;
+
+  margin-top: 58px;
+
+  overflow: auto;
+
+  @media only screen and (max-width: 780px) {
+    justify-content: flex-start;
+  }
 `;
 
 export const Secondary = styled(PositionUser)`
@@ -51,7 +63,7 @@ export const Third = styled(PositionUser)`
 
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 export const Fourth = styled(PositionUser)`
@@ -59,5 +71,5 @@ export const Fourth = styled(PositionUser)`
 
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
 `;

@@ -7,12 +7,13 @@ interface Props {
 
 export const Container = styled.div<Props>`
   background: var(--card-default-color);
-  border: 2px solid #ecebed;
+  border: 1px solid #ecebed;
 
-  padding: 13px;
+  padding: 12px;
 
   width: 100%;
   max-width: 205px;
+  min-width: 205px;
 
   max-height: 285px;
   height: 100%;
@@ -21,12 +22,12 @@ export const Container = styled.div<Props>`
 
   overflow: hidden;
   user-select: none;
+
+  z-index: 2;
 `;
 
 export const ColorAndNumber = styled.div<Props>`
   display: flex;
-  justify-content: center;
-  align-items: center;
 
   background: ${props => {
     switch (props.color) {
@@ -34,18 +35,46 @@ export const ColorAndNumber = styled.div<Props>`
         return 'var(--card-yellow-color);';
       case 'blue':
         return 'var(--card-blue-color);';
-      case 'pink':
-        return '#342747;';
+      case 'red':
+        return 'var(--card-red-color);';
+      case 'green':
+          return 'var(--card-green-color);';
       default:
         return 'var(--card-default-color);';
     }
   }};
   border-radius: 12px;
 
-  padding: 10px 12px;
+  padding: 15px 18px;
 
   width: 100%;
   height: 100%;
+`;
+
+export const Wrapper = styled.div`
+  position: absolute;
+`;
+
+export const HigherValue = styled.div`
+  position: relative;
+
+  span {
+    color: #fff;
+
+    font-size: 24px;
+
+    font-family: 'Archivo Black', sans-serif;
+  }
+`;
+
+export const TopValue = styled(HigherValue)`
+  top: 5px;
+  left: 8px;
+`;
+
+export const BottomValue = styled(HigherValue)`
+  left: 148px;
+  bottom: -189px;
 `;
 
 export const Content = styled.div`
@@ -65,8 +94,6 @@ export const Content = styled.div`
 
 export const Value = styled.span`
   font-size: 68px;
-
-  user-select: none;
 
   font-family: 'Archivo Black', sans-serif;
 `;

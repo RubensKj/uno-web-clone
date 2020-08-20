@@ -10,7 +10,9 @@ export const Container = styled.div`
 
   height: 100%;
 
-  transform: scale(0.91);
+  z-index: 2;
+
+  transform: scale(0.81);
 
   .scale-0 {
     transform: skew(0deg);

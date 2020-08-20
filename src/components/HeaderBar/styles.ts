@@ -16,6 +16,8 @@ export const Container = styled.div`
 
   background: #fafbff;
 
+  z-index: 999;
+
   ul {
     list-style: none;
 
@@ -47,6 +49,27 @@ export const Container = styled.div`
 
       :hover {
         transform: translateY(-1px);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 780px) {
+    flex-direction: row !important;
+    width: 100%;
+    height: var(--header-height) !important;
+
+    ul {
+      flex-direction: row !important;
+
+      li {
+        margin-top: 0 !important;
+        margin-right: 15px !important;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
   }

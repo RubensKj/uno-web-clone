@@ -28,9 +28,15 @@ export default createGlobalStyle`
   :root {
     --table-color: #594a4e;
     --sidebar-width: 68px;
+    --header-height: 52px;
+
+    
     --card-default-color: white;
+
+    /* Cards Colors */
     --card-yellow-color: #fec771;
     --card-blue-color: #4f98ca;
     --card-red-color: #f65c78;
+    --card-green-color: #639a67;
   }
 `;

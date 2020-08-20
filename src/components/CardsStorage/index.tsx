@@ -15,10 +15,10 @@ const CardsStorage: React.FC = () => {
         <Card classForValue={handleIndex(2, false)} value={5} color="blue" />
       </CardArea>
       <CardArea>
-        <Card classForValue={handleIndex(3, false)} value={2} color="pink" />
+        <Card classForValue={handleIndex(3, false)} value={2} color="red" />
       </CardArea>
       <CardArea>
-        <Card classForValue={handleIndex(4, false)} value={3} color="pink" />
+        <Card classForValue={handleIndex(4, false)} value={3} color="red" />
       </CardArea>
       <CardArea>
         <Card classForValue={handleIndex(5, true)} value={5} color="blue" />

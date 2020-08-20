@@ -3,14 +3,16 @@ import React from 'react';
 import { Container, LevelArea, UserLevel, BorderAvatar, AvatarArea, Avatar, LabelUsername } from './styles';
 
 interface UserProps {
+  isMe: boolean;
+  isMyTurn: boolean;
   level: number;
   avatar?: string;
   username: string;
 }
 
-const UserContent: React.FC<UserProps> = ({ level, avatar, username }) => {
+const UserContent: React.FC<UserProps> = ({ isMe, isMyTurn, level, avatar, username }) => {
   return (
-    <Container>
+    <Container isMe={isMe} isMyTurn={isMyTurn}>
       <LevelArea>
         <UserLevel>
           <span>{level}</span>

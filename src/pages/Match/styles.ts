@@ -18,11 +18,11 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   display: grid;
   grid-template-areas:
-    "secondary secondary secondary secondary"
-    "third packCards packCards fourth"
-    "third cards cards fourth"
-    "primary primary primary primary"
-    "primary primary primary primary";
+    "secondary secondary secondary"
+    "third packCards fourth"
+    "third cards fourth"
+    "primary primary primary"
+    "primary primary primary";
   
   height: 100%;
 
@@ -58,8 +58,8 @@ export const GridArea = styled.div`
 
 export const DeckArea = styled(GridArea)`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 
   grid-area: packCards;
 `;

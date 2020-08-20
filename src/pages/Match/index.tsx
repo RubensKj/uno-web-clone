@@ -1,6 +1,7 @@
 import React from 'react';
 
 // Components
+import DeckCards from '../../components/DeckCards';
 import CardsStorage from '../../components/CardsStorage';
 import PlayerCards from '../../components/PlayerCards';
 
@@ -14,7 +15,7 @@ const Match: React.FC = () => {
           <p>TopGuy</p>
         </TopGuyArea>
         <DeckArea>
-          <p>Baralho aqui</p>
+          <DeckCards />
         </DeckArea>
         <CardsArea>
           <CardsStorage />

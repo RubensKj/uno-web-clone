@@ -23,6 +23,9 @@ export const Wrapper = styled.div`
     "primary primary primary";
   
   height: 100%;
+
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-rows: 18% 42% 40%;
 `;
 
 export const PositionUser = styled.div`
@@ -55,21 +58,43 @@ export const Primary = styled(PositionUser)`
 export const Secondary = styled(PositionUser)`
   grid-area: secondary;
 
-  height: 55% !important;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  transform: scale(0.8);
+
+  height: 100% !important;
 `;
 
 export const Third = styled(PositionUser)`
   grid-area: third;
 
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: start;
   align-items: flex-start;
+
+  width: 55% !important;
+
+  height: 100%;
+
+  margin-left: -24px;
+
+  transform: scale(0.7);
 `;
 
 export const Fourth = styled(PositionUser)`
   grid-area: fourth;
 
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  width: 100% !important;
+
+  margin-left: 45px;
+
+  transform: scale(0.7);
 `;

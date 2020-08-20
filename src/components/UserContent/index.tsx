@@ -18,7 +18,7 @@ const UserContent: React.FC<UserProps> = ({ isMe, isMyTurn, level, avatar, usern
           <span>{level}</span>
         </UserLevel>
       </LevelArea>
-      <BorderAvatar>
+      <BorderAvatar isMyTurn={isMyTurn}>
         <AvatarArea>
           <Avatar src={avatar ? avatar : ''} alt="User Logo" />
         </AvatarArea>

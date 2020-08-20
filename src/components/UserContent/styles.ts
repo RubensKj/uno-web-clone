@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 interface Props {
-  isMe: boolean;
-  isMyTurn: boolean;
+  isMe?: boolean;
+  isMyTurn?: boolean;
 }
 
 export const Container = styled.div<Props>`
@@ -48,8 +48,8 @@ export const UserLevel = styled.div`
   padding: 5px 12px;
 `;
 
-export const BorderAvatar = styled.div`
-  border: 1.3px solid #effffb;
+export const BorderAvatar = styled.div<Props>`
+  border: 1.3px solid ${props => props.isMyTurn ? '#91d18b;' : '#effffb;'};
 
   padding: 8px;
 

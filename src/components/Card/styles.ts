@@ -16,6 +16,7 @@ export const Container = styled.div<Props>`
   min-width: 205px;
 
   max-height: 285px;
+  min-height: 285px;
   height: 100%;
 
   border-radius: 12px;

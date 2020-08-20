@@ -4,6 +4,8 @@ import React from 'react';
 import CardsStorage from '../../components/CardsStorage';
 import UserContent from '../../components/UserContent';
 import UserCards from '../../components/UserCards';
+import PlayersCard from '../../components/PlayersCard';
+import SidePlayersCard from '../../components/SidePlayersCard';
 
 import { Container, Wrapper, CardsArea, Primary, Secondary, Third, Fourth } from './styles';
 
@@ -20,12 +22,15 @@ const Match: React.FC = () => {
         </Primary>
         <Secondary>
           <UserContent isMe={false} isMyTurn={false} level={24} username="Marco" avatar="https://static.dribbble.com/users/1592944/avatars/normal/0632e1877f76f0e4788f3c72e567ad56.jpg?1589215169" />
+          <PlayersCard />
         </Secondary>
         <Third>
           <UserContent isMe={false} isMyTurn={false} level={67} username="Gustavo F. Martins" avatar="https://static.dribbble.com/users/1592944/avatars/normal/0632e1877f76f0e4788f3c72e567ad56.jpg?1589215169" />
+          <SidePlayersCard />
         </Third>
         <Fourth>
-          <UserContent isMe={false} isMyTurn={false} level={4579} username="Vinicius de souza silva" avatar="https://static.dribbble.com/users/1592944/avatars/normal/0632e1877f76f0e4788f3c72e567ad56.jpg?1589215169" />
+          <UserContent isMe={false} isMyTurn={false} level={4579} username="Jxxba" avatar="https://static.dribbble.com/users/1592944/avatars/normal/0632e1877f76f0e4788f3c72e567ad56.jpg?1589215169" />
+          <SidePlayersCard />
         </Fourth>
       </Wrapper>
     </Container>

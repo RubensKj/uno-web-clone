@@ -6,7 +6,7 @@ interface Props {
 
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
   width: 100%;
@@ -31,7 +31,7 @@ export const Container = styled.div<Props>`
   height: 100%;
 
   margin-left: 58px;
-  padding-top: 24px;
+  padding-top: 50px;
 
   overflow-y: hidden;
 
@@ -92,50 +92,6 @@ export const Container = styled.div<Props>`
             ':nth-last-child(1) { transform: rotateZ(4deg) translateY(12px); };' +
             ':nth-last-child(2) { transform: rotateZ(4deg) translateY(4px); };' +
             ':nth-last-child(3) { transform: rotateZ(4deg) translateY(4px); };';
-        }
-
-        if (props.size > 10 && props.size <= 14) {
-          return ':nth-child(1) { transform: rotateZ(-8deg) translateY(12px); }; ' +
-            ':nth-child(2) { transform: rotateZ(-6deg) translateY(4px);}; ' +
-            ':nth-child(3) { transform: rotateZ(-4deg) translateY(4px);}; ' +
-            ':nth-child(4) { transform: rotateZ(-4deg) translateY(2px);}; ' +
-            ':nth-last-child(1) { transform: rotateZ(4deg) translateY(12px); };' +
-            ':nth-last-child(2) { transform: rotateZ(4deg) translateY(4px); };' +
-            ':nth-last-child(3) { transform: rotateZ(4deg) translateY(4px); };' +
-            ':nth-last-child(4) { transform: rotateZ(4deg) translateY(2px); };';
-        }
-
-        if (props.size > 14 && props.size <= 18) {
-          return ':nth-child(1) { transform: rotateZ(-8deg) translateY(12px); }; ' +
-            ':nth-child(2) { transform: rotateZ(-6deg) translateY(4px);}; ' +
-            ':nth-child(3) { transform: rotateZ(-4deg) translateY(4px);}; ' +
-            ':nth-child(4) { transform: rotateZ(-4deg) translateY(2px);}; ' +
-            ':nth-child(5) { transform: rotateZ(-4deg) translateY(2px);}; ' +
-            ':nth-last-child(1) { transform: rotateZ(4deg) translateY(12px); };' +
-            ':nth-last-child(2) { transform: rotateZ(4deg) translateY(4px); };' +
-            ':nth-last-child(3) { transform: rotateZ(4deg) translateY(4px); };' +
-            ':nth-last-child(4) { transform: rotateZ(4deg) translateY(2px); };' +
-            ':nth-last-child(5) { transform: rotateZ(4deg) translateY(2px); };';
-        }
-
-        if (props.size > 18) {
-          return ':nth-child(1) { transform: rotateZ(-10deg) translateY(12px); }; ' +
-            ':nth-child(2) { transform: rotateZ(-8deg) translateY(6px);}; ' +
-            ':nth-child(3) { transform: rotateZ(-6deg) translateY(6px);}; ' +
-            ':nth-child(4) { transform: rotateZ(-4deg) translateY(4px);}; ' +
-            ':nth-child(5) { transform: rotateZ(-4deg) translateY(2px);}; ' +
-            ':nth-child(6) { transform: rotateZ(-4deg) translateY(2px);}; ' +
-            ':nth-child(7) { transform: rotateZ(-4deg) translateY(2px);}; ' +
-            ':nth-child(8) { transform: rotateZ(-4deg) translateY(2px);}; ' +
-            ':nth-last-child(1) { transform: rotateZ(4deg) translateY(12px); };' +
-            ':nth-last-child(2) { transform: rotateZ(4deg) translateY(6px); };' +
-            ':nth-last-child(3) { transform: rotateZ(4deg) translateY(6px); };' +
-            ':nth-last-child(4) { transform: rotateZ(4deg) translateY(4px); };' +
-            ':nth-last-child(5) { transform: rotateZ(4deg) translateY(2px); };' +
-            ':nth-last-child(6) { transform: rotateZ(4deg) translateY(2px); };' +
-            ':nth-last-child(7) { transform: rotateZ(4deg) translateY(2px); };' +
-            ':nth-last-child(8) { transform: rotateZ(4deg) translateY(2px); };' +
-            'margin-right: -157px;';
         }
       }
     }

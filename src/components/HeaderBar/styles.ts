@@ -26,7 +26,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
 
-    li {
+    a {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -36,13 +36,11 @@ export const Container = styled.div`
 
       cursor: pointer;
 
-      & + li {
-        margin-top: 15px;
-      }
+      text-decoration: none;
+      color: initial;
 
-      a {
-        text-decoration: none;
-        color: initial;
+      & + a {
+        margin-top: 15px;
       }
 
       transition: 0.15s transform;
@@ -58,14 +56,21 @@ export const Container = styled.div`
     width: 100%;
     height: var(--header-height) !important;
 
+    border-right: 0;
+    border-bottom: 1.3px solid #ecebed;
+
     ul {
       flex-direction: row !important;
 
-      li {
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         margin-top: 0 !important;
         margin-right: 15px !important;
 
-        a {
+        li {
           display: flex;
           justify-content: center;
           align-items: center;

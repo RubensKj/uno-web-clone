@@ -12,32 +12,32 @@ import { Container, IconArea, AvatarArea, Avatar } from './styles';
 const HeaderBar: React.FC = () => {
   return (
     <Container>
-      <IconArea>
-        <a href="/">
+      <IconArea href="/">
+        <div>
           <BoxIcon size={24} color="#00cd69" />
-        </a>
+        </div>
       </IconArea>
       <ul>
-        <li>
-          <a href="/match/569874">
+        <a href="/match/569874">
+          <li>
             <GridIcon size={20} color="#2f363d" />
-          </a>
-        </li>
-        <li>
-          <a href="#c">
+          </li>
+        </a>
+        <a href="#c">
+          <li>
             <LayersIcon size={20} color="#2f363d" />
-          </a>
-        </li>
-        <li>
-          <a href="#b">
+          </li>
+        </a>
+        <a href="#b">
+          <li>
             <UsersIcon size={20} color="#2f363d" />
-          </a>
-        </li>
-        <li>
-          <a href="#a">
+          </li>
+        </a>
+        <a href="#a">
+          <li>
             <ConfigIcon size={20} color="#2f363d" />
-          </a>
-        </li>
+          </li>
+        </a>
       </ul>
       <ul>
         <AvatarArea>

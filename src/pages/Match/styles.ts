@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const Container = styled.div`
   padding-left: var(--sidebar-width);
 
-  /* background: #f5f5f5; */
   background: #eaeaea;
 
   height: 100%;
+
   overflow: hidden;
 
   @media only screen and (max-width: 780px) {
@@ -18,20 +18,53 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   display: grid;
   grid-template-areas:
-    "secondary secondary secondary"
-    "third cards fourth"
-    "primary primary primary";
+    "secondary secondary secondary secondary"
+    "third packCards packCards fourth"
+    "third cards cards fourth"
+    "primary primary primary primary"
+    "primary primary primary primary";
   
   height: 100%;
 
-  grid-template-columns: 300px 1fr 300px;
-  grid-template-rows: 18% 42% 40%;
+  transition: 0.2s grid-template-rows;
+
+  grid-template-columns: 448px auto 448px;
+  grid-template-rows: 18% 155px 254px auto;
+
+  @media only screen and (max-width: 1520px) {
+    grid-template-columns: 348px auto 348px;
+    grid-template-rows: 18% 155px 254px auto;
+  }
+
+  @media only screen and (max-width: 1260px) {
+    grid-template-columns: 248px auto 248px;
+    grid-template-rows: 18% 155px 254px auto;
+  }
+
+  @media only screen and (max-width: 850px) {
+    grid-template-columns: 191px auto 191px;
+    grid-template-rows: 18% 86px 273px auto;
+  }
+
+  @media only screen and (max-width: 580px) {
+    grid-template-columns: 91px auto 91px;
+    grid-template-rows: 18% 86px 160px auto;
+  }
 `;
 
-export const PositionUser = styled.div`
+export const GridArea = styled.div`
+  border: 1px solid red;
 `;
 
-export const CardsArea = styled(PositionUser)`
+export const DeckArea = styled(GridArea)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: packCards;
+`;
+
+export const CardsArea = styled(GridArea)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,62 +72,41 @@ export const CardsArea = styled(PositionUser)`
   grid-area: cards;
 `;
 
-export const Primary = styled(PositionUser)`
-  grid-area: primary;
-
+export const TopGuyArea = styled(GridArea)`
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-
-  margin-top: 58px;
-
-  overflow: auto;
-
-  @media only screen and (max-width: 780px) {
-    justify-content: flex-start;
-  }
-`;
-
-export const Secondary = styled(PositionUser)`
-  grid-area: secondary;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-
-  transform: scale(0.8);
-
-  height: 100% !important;
-`;
-
-export const Third = styled(PositionUser)`
-  grid-area: third;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
   align-items: flex-start;
 
-  width: 55% !important;
-
-  height: 100%;
-
-  margin-left: -24px;
-
-  transform: scale(0.7);
+  grid-area: secondary;
 `;
 
-export const Fourth = styled(PositionUser)`
-  grid-area: fourth;
+export const LeftGuyArea = styled(GridArea)`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 
+  grid-area: third;
+`;
+
+export const RightGuyArea = styled(GridArea)`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
 
-  width: 100% !important;
+  grid-area: fourth;
+`;
 
-  margin-left: 45px;
+export const PlayerGuyArea = styled(GridArea)`
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 
-  transform: scale(0.7);
+  width: 100%;
+  height: 100%;
+
+  overflow: auto;
+
+  grid-area: primary;
 `;

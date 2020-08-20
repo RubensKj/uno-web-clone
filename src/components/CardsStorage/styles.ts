@@ -55,6 +55,10 @@ export const Table = styled.div`
   z-index: -99;
 
   box-shadow: 0 1px 10px 0 rgba(0,0,0,0.1);
+
+  @media only screen and (max-width: 580px) {
+    border-radius: 28%;
+  }
 `;
 
 export const CardArea = styled.div`

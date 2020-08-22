@@ -19,12 +19,38 @@ export const Container = styled.div<Props>`
   min-height: 285px;
   height: 100%;
 
-  border-radius: 12px;
+  border-radius: 10px;
 
   overflow: hidden;
   user-select: none;
 
   z-index: 2;
+
+  transition: 0.2s width, height, padding;
+
+  @media only screen and (max-width: 850px) {
+    max-width: 135px;
+    min-width: 130px;
+
+    max-height: 205px;
+    min-height: 205px;
+
+    padding: 8px;
+
+    border-radius: 8px;
+  }
+
+  @media only screen and (max-width: 580px) {
+    max-width: 80px;
+    min-width: 80px;
+
+    max-height: 121px;
+    min-height: 121px;
+
+    padding: 5px;
+
+    border-radius: 6px;
+  }
 `;
 
 export const ColorAndNumber = styled.div<Props>`
@@ -50,14 +76,24 @@ export const ColorAndNumber = styled.div<Props>`
 
   width: 100%;
   height: 100%;
+
+  transition: 0.2s padding;
+
+  @media only screen and (max-width: 850px) {
+    padding: 28px 16px;
+  }
+
+  @media only screen and (max-width: 580px) {
+    padding: 20px 12px;
+  }
 `;
 
 export const Wrapper = styled.div`
-  position: absolute;
+  position: relative;
 `;
 
 export const HigherValue = styled.div`
-  position: relative;
+  position: absolute;
 
   span {
     color: #fff;
@@ -65,17 +101,45 @@ export const HigherValue = styled.div`
     font-size: 24px;
 
     font-family: 'Archivo Black', sans-serif;
+
+    @media only screen and (max-width: 850px) {
+      font-size: 18px;
+    }
+
+    @media only screen and (max-width: 580px) {
+      font-size: 16px;
+    }
   }
 `;
 
 export const TopValue = styled(HigherValue)`
   top: 5px;
   left: 8px;
+
+  @media only screen and (max-width: 850px) {
+    top: 2px;
+    left: 7px;
+  }
+
+  @media only screen and (max-width: 580px) {
+    top: -1px;
+    left: 5px;
+  }
 `;
 
 export const BottomValue = styled(HigherValue)`
-  left: 148px;
-  bottom: -189px;
+  left: 154px;
+  bottom: -257px;
+
+  @media only screen and (max-width: 850px) {
+    left: 86px;
+    bottom: -187px;
+  }
+
+  @media only screen and (max-width: 580px) {
+    left: 54px;
+    bottom: -110px;
+  }
 `;
 
 export const Content = styled.div`
@@ -97,4 +161,14 @@ export const Value = styled.span`
   font-size: 68px;
 
   font-family: 'Archivo Black', sans-serif;
+
+  transition: 0.2s font-size;
+
+  @media only screen and (max-width: 850px) {
+    font-size: 42px;
+  }
+
+  @media only screen and (max-width: 580px) {
+    font-size: 35px;
+  }
 `;

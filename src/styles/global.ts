@@ -32,6 +32,7 @@ export default createGlobalStyle`
 
     
     --card-default-color: white;
+    --card-behind-color: #00CD69;
 
     /* Cards Colors */
     --card-yellow-color: #fec771;

@@ -4,15 +4,23 @@ import React from 'react';
 import DeckCards from '../../components/DeckCards';
 import CardsStorage from '../../components/CardsStorage';
 import PlayerCards from '../../components/PlayerCards';
+import PlayerInfo from '../../components/PlayerInfo';
 
-import { Container, Wrapper, TopGuyArea, DeckArea, CardsArea, LeftGuyArea, RightGuyArea, PlayerGuyArea } from './styles';
+import {
+  Container, Wrapper, TopGuyArea, DeckArea,
+  CardsArea, LeftGuyArea, RightGuyArea, PlayerGuyArea,
+  CardsTop, CardsLeft, CardsRight
+} from './styles';
 
 const Match: React.FC = () => {
   return (
     <Container>
       <Wrapper>
         <TopGuyArea>
-          <p>TopGuy</p>
+          <PlayerInfo />
+          <CardsTop>
+            <p style={{ fontSize: 14 }}>Top Guy Cards here</p>
+          </CardsTop>
         </TopGuyArea>
         <DeckArea>
           <DeckCards />
@@ -21,10 +29,16 @@ const Match: React.FC = () => {
           <CardsStorage />
         </CardsArea>
         <LeftGuyArea>
-          <p>Left Guy here</p>
+          <PlayerInfo />
+          <CardsLeft>
+            <p style={{ fontSize: 14 }}>Left Guy here</p>
+          </CardsLeft>
         </LeftGuyArea>
         <RightGuyArea>
-          <p>Right Guy here</p>
+          <PlayerInfo />
+          <CardsRight>
+            <p style={{ fontSize: 14 }}>Right Guy here</p>
+          </CardsRight>
         </RightGuyArea>
         <PlayerGuyArea>
           <PlayerCards />

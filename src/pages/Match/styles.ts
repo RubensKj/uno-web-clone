@@ -78,6 +78,8 @@ export const TopGuyArea = styled(GridArea)`
   align-items: flex-start;
 
   grid-area: secondary;
+
+  padding-top: 2px;
 `;
 
 export const LeftGuyArea = styled(GridArea)`
@@ -109,4 +111,26 @@ export const PlayerGuyArea = styled(GridArea)`
   overflow: auto;
 
   grid-area: primary;
+`;
+
+export const Cards = styled.div`
+
+`;
+
+export const CardsTop = styled(Cards)`
+  margin-top: -15px;
+
+  margin-left: 5px;
+`;
+
+export const CardsLeft = styled(Cards)`
+  margin-left: -45px;
+  
+  margin-top: 5px;
+`;
+
+export const CardsRight = styled(Cards)`
+  margin-right: -45px;
+  
+  margin-top: 5px;
 `;
